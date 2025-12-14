@@ -1,0 +1,133 @@
+# VERIDIC — Continuity Access Allocation (CAA)
+# System Policy Definition
+# Version: v0.1-startup
+
+policy_id: CAA_STARTUP
+status: active
+scope: healthcare_only
+
+classification:
+  insurance: false
+  income: false
+  cash_grant: false
+  security: false
+  custody: false
+
+purpose:
+  description: >
+    Provide limited, non-cash, policy-bound continuity access to eligible
+    healthcare services to reduce post-event financial disruption.
+  guarantees: none
+  promises: none
+
+allocation:
+  universal_minimum:
+    amount_usd: 500
+    applies_to: all_verified_users
+
+  income_scaled_caps:
+    verification:
+      method:
+        - self_attestation
+        - third_party_attestation
+        - employer_confirmation
+      data_handling:
+        raw_income_stored: false
+        band_only: true
+        on_chain: band_hash_only
+
+    bands:
+      - id: BAND_LOW
+        income_range: "<$30,000"
+        cap_usd: 3500
+      - id: BAND_MID_LOW
+        income_range: "$30,000–$60,000"
+        cap_usd: 2500
+      - id: BAND_MID
+        income_range: "$60,000–$100,000"
+        cap_usd: 1500
+      - id: BAND_HIGH
+        income_range: "$100,000+"
+        cap_usd: 500
+
+add_ons:
+  user_funded:
+    allowed: true
+    segregated: true
+    pooled: false
+    convertible_to_cash: false
+
+  employer_or_sponsor:
+    allowed: true
+    segregated: true
+    pooled: false
+    transferable: false
+
+activation:
+  issued_at: enrollment
+  activates_on_any:
+    - first_verified_healthcare_event
+    - seasoning_period_days: [90, 180]
+    - initial_user_funded_deposit
+
+usage_constraints:
+  eligible_services:
+    - routine_care
+    - urgent_care
+    - mental_health
+    - dental
+    - vision
+    - labs_and_diagnostics
+    - emergency_post_event_continuity
+
+  prohibited_uses:
+    - elective_surgery
+    - cosmetic_procedures
+    - long_term_inpatient_care
+    - catastrophic_unbounded_treatment
+    - cash_withdrawal
+
+expiry:
+  enabled: true
+  window_months: [12, 24]
+  unused_value_rollover: false
+
+governance:
+  revocation_conditions:
+    - fraud
+    - misrepresentation
+    - policy_violation
+  revocation_method:
+    discretionary: false
+    rule_based: true
+    auditable: true
+
+language_controls:
+  allowed_terms:
+    - prepaid_access
+    - continuity_buffer
+    - rights_allocation
+    - policy_bound_entitlement
+    - service_limited_credit
+
+  banned_terms:
+    - insurance
+    - coverage
+    - insured
+    - guarantee
+    - grant
+    - income
+    - free_money
+    - safety_net
+
+non_substitution_clause:
+  enabled: true
+  text: >
+    CAA does not replace insurance, public benefits, employer plans,
+    or legally required coverage.
+
+failure_behavior:
+  if_funds_insufficient:
+    degrade_to: advocacy_and_coordination_only
+  if_system_unavailable:
+    preserve: user_funds_and_rights
