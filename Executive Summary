@@ -1,0 +1,17 @@
+## Executive Summary
+
+VERIDIC is a proof-based economic infrastructure designed to connect real-world events to financial outcomes using verifiable facts rather than assumptions, predictions, or centralized trust. The system enables financial continuity across essential services—beginning with healthcare—without relying on insurance models, speculative tokens, pooled risk, or surveillance-based data collection.
+
+At its core, VERIDIC separates economic activity into distinct layers: a neutral truth layer that anchors cryptographic proof of real-world events, a capital layer that manages user-owned prepaid value under explicit policy constraints, and execution layers that integrate with existing payment rails and institutions. This separation allows the system to remain auditable, privacy-preserving, and resilient under stress, while interoperating seamlessly with current financial and service infrastructures.
+
+Healthcare is the initial application domain because it exposes the failures of assumption-based systems most clearly. Costs are opaque, verification is fragmented, and emergencies often result in severe financial and administrative harm. VERIDIC introduces a financial continuity layer that supports routine care, mental health, dental, vision, and emergency scenarios without replacing clinical care, insurance, or provider workflows. Users pre-fund healthcare expenses, access transparent pricing, and retain control over their funds at all times.
+
+A key component of the healthcare vertical is CARE BRIDGE, an emergency and acute-care continuity mechanism. CARE BRIDGE does not provide insurance or guarantee payment. Instead, it enables rapid access to user-owned liquidity during verified emergencies and supports post-care billing review, negotiation, and resolution through licensed advocacy. This approach addresses the most disruptive phase of healthcare—after care has occurred—without interfering with hospitals or introducing systemic risk.
+
+VERIDIC employs privacy-preserving Proof of Presence to verify that real-world events occurred at a specific place and time without continuous tracking or identity exposure. Programmable rights containers (implemented using NFTs) represent enforceable, non-speculative rights tied to prepaid value and service access. Settlement is rail-agnostic and non-custodial, integrating existing banking, card, wallet, and digital payment systems.
+
+The system is intentionally constrained. VERIDIC is not insurance, not an investment product, not a money transmitter, and not an identity or surveillance platform. These boundaries are enforced through architecture, language, and operational design. Under adverse conditions, the system degrades gracefully, prioritizing user ownership, access, and auditability over optimization or yield.
+
+Beyond healthcare, VERIDIC defines a path for future expansion into domains such as education, workforce verification, public benefits, and future income rights. These engines are architecturally supported but deferred until appropriate legal, institutional, and funding conditions exist.
+
+VERIDIC is not a marketplace or a financial product. It is infrastructure. Its purpose is to provide a durable, verifiable foundation for real-world economic interactions—starting where failure is most costly, and expanding only when proof, policy, and reality allow.
