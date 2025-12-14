@@ -93,21 +93,8 @@ Only cryptographic proofs are anchored publicly.
 
 Expansion is gated by real-world validation and regulatory clarity.
 
----
-
-veridic/
-├─ whitepaper/
-├─ docs/
-├─ protocol/
-├─ engine/
-├─ healthcare/
-├─ care-bridge/
-├─ settlement/
-├─ pop/
-└─ roadmap/
 
 ---
-
 ## Disclaimer
 
 This repository and its contents are provided for informational purposes only.  
