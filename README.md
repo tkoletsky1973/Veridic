@@ -95,4 +95,28 @@ Expansion is gated by real-world validation and regulatory clarity.
 
 ---
 
-## Repository Structure
+veridic/
+├─ whitepaper/
+├─ docs/
+├─ protocol/
+├─ engine/
+├─ healthcare/
+├─ care-bridge/
+├─ settlement/
+├─ pop/
+└─ roadmap/
+
+---
+
+## Disclaimer
+
+This repository and its contents are provided for informational purposes only.  
+Nothing herein constitutes legal, medical, financial, or investment advice.
+
+VERIDIC does not provide insurance, coverage, or guaranteed outcomes.  
+All use is subject to applicable laws and separate terms.
+
+---
+
+**Author:** Todd Koletsky  
+**Project:** VERIDIC
